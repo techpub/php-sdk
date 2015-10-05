@@ -32,7 +32,7 @@ class oneall_curly
 	public function __construct ($options = array ())
 	{
 		// Default Options
-		$this->set_option ('USERAGENT', 'Mozilla/5.0 (OneAll Curly) Gecko/20080311 Firefox/2.0.0.13');
+		$this->set_option ('USERAGENT', 'SocialLogin/1.0 OneAllCurly/1.0 (+http.//www.oneall.com)');
 		$this->set_option ('TIMEOUT', 125);
 		$this->set_option ('CONNECTTIMEOUT', 125);
 		$this->set_option ('SSL_VERIFYPEER', 0);
@@ -280,6 +280,7 @@ class oneall_curly
 		{
 			curl_setopt ($ci, constant ('CURLOPT_' . $key), $value);
 		}
+		curl_setopt ($ci, CURLINFO_HEADER_OUT, true);
 
 		// Get response
 		$response = curl_exec ($ci);
