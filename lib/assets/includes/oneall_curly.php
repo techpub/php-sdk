@@ -32,7 +32,7 @@ class oneall_curly
 	public function __construct ($options = array ())
 	{
 		// Default Options
-		$this->set_option ('USERAGENT', 'SocialLogin/1.0 OneAllCurly/1.0 (+http.//www.oneall.com)');
+		$this->set_option ('USERAGENT', 'PHPSDK/1.0 Curly/1.0 (+http.//www.oneall.com)');
 		$this->set_option ('TIMEOUT', 125);
 		$this->set_option ('CONNECTTIMEOUT', 125);
 		$this->set_option ('SSL_VERIFYPEER', 0);
